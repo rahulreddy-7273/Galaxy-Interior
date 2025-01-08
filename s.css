@@ -387,3 +387,51 @@ img, video {
     max-width: 100%;
     height: auto;
 }
+
+
+/* Default desktop styles */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-column,
+.footer-contact {
+    flex: 1;
+    min-width: 200px; /* Ensures columns don’t get too narrow */
+}
+
+/* Adjust logo size */
+.footer-logo img {
+    max-width: 150px; /* Adjust as needed */
+    height: auto;
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column,
+    .footer-contact {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        max-width: 120px; /* Adjust logo size on mobile */
+    }
+
+    .footer-column h3 {
+        font-size: 1.2rem;
+    }
+
+    .footer-contact ul {
+        padding: 0;
+    }
+}
