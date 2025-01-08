@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+.a {
+    width: 1000px; /* Width of the slider */
+    height: auto; /* Adjusts automatically based on content */
+    margin: 0 auto; /* Center the slider */
+    text-align: center;
+}
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 150px;
+    height: 90px;
+    border-radius: 180px;
+}
+.slogan {
+    margin-left: 10px;
+    font-size: 16px;
+    color: rgb(25, 145, 184);
+    font-style :italic;
+    padding: 5px;
+} 
+
+.menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background 0.3s;
+}
+
+.menu a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+#toggle {
+    display: none;
+}
+/* About section styling */
+#about {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .about-content {
+    max-width: 900px;  /* Increase width for better content flow */
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;  /* Justify text for proper alignment */
+  }
+  
+  .about-content h2 {
+    font-size: 2.2rem; /* Slightly larger font for heading */
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .about-content h5 {
+    font-size: 1.5rem;
+    color: #777;
+    margin-bottom: 20px;
+    font-style: italic; /* Italicize tagline for emphasis */
+  }
+  
+  .about-content p {
+    font-size: 1.15rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify; /* Ensure paragraphs are justified */
+  }
+  
+  @media (max-width: 768px) {
+    .about-content {
+      padding: 10px;
+    }
+  
+    .about-content h2 {
+      font-size: 1.8rem;
+    }
+  
+    .about-content h5 {
+      font-size: 1.2rem;
+    }
+  
+    .about-content p {
+      font-size: 1rem;
+    }
+  }
+  
+  
+
+@media (max-width: 768px) {
+    .menu {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .menu li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    #toggle:checked + .hamburger + .menu {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+/* Carousel Button Styling */
+.carousel-caption .btn {
+    background-color: #f44336;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.carousel-caption .btn:hover {
+    background-color: #d32f2f;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+/* Carousel Image Styling */
+.carousel-inner img {
+    max-height: 500px; /* Set the height of the images */
+    width: 100%; /* Ensure the image takes the full width of the container */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+}
+
+
+  /* Keyframes for moving text */
+  @keyframes moveText {
+    0% {
+      left: 100%; /* Start from the right */
+    }
+    100% {
+      left: -100%; /* Move off to the left */
+    }
+  }
+
+/* Services Section */
+#services {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.services-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.services-content h2 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.services-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.service-box {
+    width: 32%; /* Each box will take up 30% of the container */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.service-box h4 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.service-box p {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 10px;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .services-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box {
+        width: 80%; /* Make the boxes stack on top of each other on small screens */
+        margin-bottom: 20px;
+    }
+}
+
+
+#why-choose {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.why-choose-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.why-choose-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.why-choose-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+
+
+
+.footer {
+    background-color: #2e1f3d; /* Dark background */
+    color: #fff; /* White text */
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Evenly spaced sections */
+    align-items: center; /* Align sections at the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    padding: 20px;
+}
+
+.footer-logo {
+    flex: 1;
+    max-width: 200px; /* Keeps the logo at a reasonable size */
+    margin-right: auto; /* Pushes the logo to the left */
+}
+
+.footer-logo img {
+    width: 100%; /* Ensures the image scales correctly */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes extra spacing below the image */
+}
+
+
+.footer-column {
+    flex: 1; /* Equal column width */
+    max-width: 250px;
+    margin: 10px 0;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 5px 0;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact ul li a {
+    color: #87ceeb; /* Link color */
+    text-decoration: none;
+}
+
+.footer-contact ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
