@@ -477,3 +477,54 @@ img, video {
     }
 }
 
+/* Ensure navbar is visible on mobile */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .navbar-menu {
+    display: flex;
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .navbar-menu {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .navbar-toggler {
+        display: block; /* If you have a hamburger menu button */
+    }
+}
+
+/* Make sure 'Book Appointment' button is visible */
+.book-appointment {
+    padding: 10px 20px;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .book-appointment {
+        width: 100%; /* Make the button stretch on mobile */
+        font-size: 16px;
+    }
+}
+
