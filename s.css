@@ -435,3 +435,45 @@ img, video {
         padding: 0;
     }
 }
+
+/* Default styles for desktop */
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contact ul li {
+    margin-bottom: 10px;
+}
+
+.footer-contact strong {
+    font-weight: bold;
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .footer-contact {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .footer-contact ul {
+        padding-left: 0;
+    }
+
+    .footer-contact ul li {
+        margin-bottom: 15px;
+    }
+
+    .footer-contact a {
+        word-break: break-word;
+        display: block;
+    }
+
+    .footer-contact strong {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
